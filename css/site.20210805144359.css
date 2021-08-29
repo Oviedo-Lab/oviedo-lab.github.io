@@ -38,7 +38,7 @@ li {
 .colwrapper{line-height:0;}
 .vis-3{display:inline-block;vertical-align:top;overflow:visible;}
 .size-2{min-width:959px;width:959px;min-height:28px;height:28px;}
-.cont-2{z-index:1;pointer-events:auto;}
+.cont-2{z-index:100;pointer-events:auto;}
 .vis-4{display:inline-block;vertical-align:top;}
 .menu{padding:0px 0px 0px 0px;}
 .menu-link{outline:0;}
