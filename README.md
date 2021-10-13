@@ -1,53 +1,106 @@
-# bedford lab research
+# Oviedo Lab Webside
+
+## Attribution
+
+This repository was forked from [Bedford Lab's jekyll repository](https://github.com/blab/blotter). We are thankful for their contributions and their willingness to make their sources freely available! See the original repo for more inspiration and information.
+
+## Overview
+
+This repository contains the source code needed to *generate* the site hosted at [oviedolab.org](oviedolab.org) via Github Pages. The site itself (the HTML, CSS, javascript, and static assest) are located in a [separate Github Pages repository](https://github.com/Oviedo-Lab/oviedo-lab.github.io).
+
+The site is generated via a static site generate called [jekyll](https://jekyllrb.com), written in the [ruby](https://www.ruby-lang.org/en/) programming language. It is *not* necessary to know ruby to make modifications to the site. Some experience with HTML, CSS, and javascript will be helpful to make non-trivial modifications, but basic proficiency with [markdown](https://www.markdownguide.org/) is all that is necessary for adding content.
+
+The basic process of updating the site is as follows:
+
+1.) Write a new post in markdown
+2.) Build the site using jekyll and preview your changes locally, commiting and pushing them upstream when you are satisfied.
+3.) Push the resulting `_site` directory contents into the [Github Pages repository](https://github.com/Oviedo-Lab/oviedo-lab.github.io), making sure not to clobber the [`CNAME` file](https://github.com/Oviedo-Lab/oviedo-lab.github.io/blob/main/CNAME) in the process (which allows the site to be accessed at "oviedolab.org")
 
 ## Build site
 
-To build the website locally, clone the repo with:
+These instructions assume a linux distribution. To build the website, you will need:
+
+### Prerequisites
+
+1.) Jekyll (and its prerequisites, including ruby). See [here](https://jekyllrb.com/docs/installation/) for platform-specific instructions.
+2.) Git
+3.) A javascript runtime such as node.js
+
+On Ubuntu 21.04, execute the following commands in the directory where you would like to clone this repo.
 
 ```
-git clone https://github.com/blab/blotter.git
+apt -y update
+
+# Install nodejs repo
+curl -sL https://deb.nodesource.com/setup_16.x  | bash -
+
+# Install prereqs
+apt -y install git ruby-full build-essential zlib1g-dev curl gnupg nodejs
+gem install 'bundler:1.13.1' jekyll
+
+# Grab the repo 
+git clone https://github.com/Oviedo-Lab/oviedolab.org.git
+cd oviedolab.org
+bundler install                                                            
 ```
 
-Then install necessary Ruby dependencies by running `bundle install` from within the `blotter` directory.  After this, the site can be be built with:
+### Building the site itself
+
+After this, the site can be be built with:
 
 ```
 bundle exec jekyll build
 ```
 
-(If you are getting errors at this stage, it may be due to your version of `bundle`. Try `gem uninstall bundler` + `gem install bundler -v 1.13.1`.)
-
 To view the site, run `bundle exec jekyll serve` and point a browser to `http://localhost:4000/`.  More information on Jekyll can be found [here](http://jekyllrb.com/).
 
-To include projects, preprocessing scripts are necessary to clone project repos and update Jekyll metadata. This can be accomplished with:
-
-```
-ruby _scripts/update-and-preprocess.rb
-```
-
-Then `jekyll build` works as normal.
 
 ## Contribute
 
-Blog posts just require YAML top matter that looks something like:
+### A brief overview of Jekyll
+
+Jekyll requires a number of files to generate a full site. These include, among others:
+
+1.) Basic website files, such as HTML templates, CSS files, and javascript
+2.) Static assets, such as PDFs, images, and videos that will appear on the website
+3.) [Markdown](https://www.markdownguide.org/) files that make writing the actual content for the website easy
+
+The latter two classes of files are the easiest to approach and are all that is necessary to modify the site's content (while the former is required to edit the sites style and layout). Static assets should be kept in their respective directories (`pdfs/`, `images/`, and `video/`), while the markdown files appear in directories according to category (such as "papers", "team", "research", "misc") in a `category_name/_posts/` directory.
+
+### Content
+
+Markdown files just require YAML top matter that looks something like (from `papers/_posts/2011-07-20-functional-asymmetry.md`):
 
 ```
----
-layout: post
-title: Newton Institute presentation
-author: Trevor Bedford
-link: http://www.newton.ac.uk/programmes/IDD/seminars/2013082213301.html
-image: /images/blog/transmission.png
----
+---                                                                          
+layout: paper                                                                  
+title: The functional asymmetry of auditory cortex is reflected in the organization of local cortical circuits
+image: /images/papers/functional-asymmetry.png                                 
+authors: Oviedo HV, Bureau I, Svoboda K, Zador AM                              
+year: 2010                                                                     
+ref: Oviedo et al. 2010. Nat Neurosci.                                         
+journal: "Nat Neurosci: nn.2659"                                               
+pdf: /pdfs/papers/functional-asymmetry.pdf                                     
+doi: 10.1038/nn.2659                                                           
+---      
 ```
+Some notes:
 
-The `layout`, `title` and `author` tags are required, while `link` and `image` are optional.  Just save a Markdown file with this top matter as something like `blog/_posts/2013-08-27-newton-institute.md`, where `2013-08-27` is the date of the post and `newton-institute` is the short title.  This short title is used in the URL of the post, so this becomes `blog/newton-institute/`, so the short title should be long enough and unique enough not to cause conflicts with other posts.
+ - The required YAML elements are dependent on the particular category of post. Look at the markdown of an existing post to get an idea of how things are rendered.
+ - *Filenames matter*. In particular:
+   - The filename should start with a date in YYYY-MM-DD format. This is used in ordering the posts; more senior team members appear first, and more recent papers appear first.
+   - Following the date, each filename should contain a dash, followed by a  short, *unique* name, followed by the `.md` extension, such as `papers/_posts/2011-07-20-functional-asymmetry.md`. This short title is used in the URL of the post, so this becomes `https://oviedolab.org/papers/functional-asymmetry/`, so the short title should be long enough and unique enough not to cause conflicts with other posts.'
 
-## For more information
+### For more information
 
-* Look over the [metadata format guide](http://bedford.io/guide/format/)
-* Look over the [Markdown style guide](http://bedford.io/guide/style/)
+* Look over the [metadata format guide](https://oviedolab.org/guide/format/)
+* Look over the [Markdown style guide](https://oviedolab.org/guide/style/)
 
-## License
+## Making changes go live
+
+Once the site is built in the `_site` directory, the contents of that directory should be moved to the [Github Pages repository](https://github.com/Oviedo-Lab/oviedo-lab.github.io). In addition, you [*must* have a `CNAME` file](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site), or the site will be visible at [oviedo-lab.github.io](oviedo-lab.github.io) instead of [oviedolab.org](oviedolab.org). If you get a 404 error, double check this.
+
+## License (from [bedford.io](http://bedford.io))
 
 All source code in this repository, consisting of files with extensions `.html`, `.css`, `.less`, `.rb` or `.js`, is freely available under an MIT license, unless otherwise noted within a file. You're welcome to borrow / repurpose code to build your own site, but I would very much appreciate attribution and a link back to [bedford.io](http://bedford.io) from your `about` page.
 
