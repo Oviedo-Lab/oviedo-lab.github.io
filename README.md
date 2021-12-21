@@ -8,7 +8,7 @@ This repository was forked from [Bedford Lab's jekyll repository](https://github
 
 This repository contains the source code needed to *generate* the site hosted at [oviedolab.org](oviedolab.org) via Github Pages. The site itself (the HTML, CSS, javascript, and static assest) are located in a [separate Github Pages repository](https://github.com/Oviedo-Lab/oviedo-lab.github.io).
 
-The site is generated via a static site generate called [jekyll](https://jekyllrb.com), written in the [ruby](https://www.ruby-lang.org/en/) programming language. It is *not* necessary to know ruby to make modifications to the site. Some experience with HTML, CSS, and javascript will be helpful to make non-trivial modifications, but basic proficiency with [markdown](https://www.markdownguide.org/) is all that is necessary for adding content.
+The site is generated via a static site generator called [jekyll](https://jekyllrb.com), written in the [ruby](https://www.ruby-lang.org/en/) programming language. It is *not* necessary to know ruby to make modifications to the site. Some experience with HTML, CSS, and javascript will be helpful to make non-trivial modifications, but basic proficiency with [markdown](https://www.markdownguide.org/) is all that is necessary for adding content.
 
 The basic process of updating the site is as follows:
 
