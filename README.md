@@ -12,9 +12,9 @@ The site is generated via a static site generate called [jekyll](https://jekyllr
 
 The basic process of updating the site is as follows:
 
-1.) Write a new post in markdown
-2.) Build the site using jekyll and preview your changes locally, commiting and pushing them upstream when you are satisfied.
-3.) Push the resulting `_site` directory contents into the [Github Pages repository](https://github.com/Oviedo-Lab/oviedo-lab.github.io), making sure not to clobber the [`CNAME` file](https://github.com/Oviedo-Lab/oviedo-lab.github.io/blob/main/CNAME) in the process (which allows the site to be accessed at "oviedolab.org")
+1. Write a new post in markdown
+2 Build the site using jekyll and preview your changes locally, commiting and pushing them upstream when you are satisfied.
+3. Push the resulting `_site` directory contents into the [Github Pages repository](https://github.com/Oviedo-Lab/oviedo-lab.github.io), making sure not to clobber the [`CNAME` file](https://github.com/Oviedo-Lab/oviedo-lab.github.io/blob/main/CNAME) in the process (which allows the site to be accessed at "oviedolab.org")
 
 
 # Contribute
@@ -26,7 +26,7 @@ The instructions below apply to all platforms (Windows, MacOS, and Linux).
 Jekyll requires a number of files to generate a full site. These include, among others:
 
 1. Basic website files, such as HTML templates, CSS files, and javascript
-2. Static assets, such as PDFs, images, and videos that will appear on the website
+2. Static assets, such as PDFs, images, and videos that will appear on the website 
 3. [Markdown](https://www.markdownguide.org/) files that make writing the actual content for the website easy
 
 The latter two classes of files are the easiest to approach and are all that is necessary to modify the site's content (while the former is required to edit the sites style and layout). Static assets should be kept in their respective directories (`pdfs/`, `images/`, and `video/`), while the markdown files appear in directories according to category (such as "papers", "team", "research", "misc") in a `category_name/_posts/` directory.
