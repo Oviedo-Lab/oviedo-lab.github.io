@@ -73,7 +73,7 @@ Windows is _not_ an officially supported platform for Jekyll, but should functio
 - Git 
 - A bash shell (typically installed as "git bash", but using MINGW64 underneath)
 
-For CUNY Windows 10 installations, you should be looking for Notepad++ and "git bash".
+For CUNY Windows 10 installations, you should be looking for Notepad++ and "git bash"..
 
 ## Building the site
 
@@ -82,6 +82,17 @@ For CUNY Windows 10 installations, you should be looking for Notepad++ and "git 
 1. Jekyll (and its prerequisites, including ruby). See [here](https://jekyllrb.com/docs/installation/) for platform-specific instructions.
 2. [Git](https://git-scm.com/download/win)
 3. A javascript runtime such as [node.js](https://nodejs.org/en/download/)
+
+Once these are installed, you can open "git bash" and run the following commands
+
+```
+# Grab the repo 
+git clone https://github.com/Oviedo-Lab/oviedolab.org.git
+cd oviedolab.org
+
+# Install ruby gems
+bundler install     
+```
 
 ### Building the site itself
 
@@ -124,6 +135,8 @@ gem install 'bundler:1.13.1' jekyll
 # Grab the repo 
 git clone https://github.com/Oviedo-Lab/oviedolab.org.git
 cd oviedolab.org
+
+# Install ruby gems
 bundler install                                                            
 ```
 
