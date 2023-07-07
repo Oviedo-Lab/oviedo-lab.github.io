@@ -1,11 +1,96 @@
----
-layout: default
-title: oviedo lab
-categories:
- - home
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="row">
+<head>
+	<meta charset="utf-8"/>
+	<title>oviedo lab</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- RSS feed -->
+	<link rel="alternate" type="application/rss+xml" title="Oviedo Lab Research" href="http://oviedolab.org/feed.xml">
+
+  <!-- Customized Bootstrap + Font Awesome + Solarized -->
+  <link href="/css/style.css" rel="stylesheet" media="screen">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/favicon.png"/>
+
+	<!-- Typekit -->
+	<script>
+	  (function(d) {
+		var config = {
+		  kitId: 'xeu8jut',
+		  scriptTimeout: 3000
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5PL3HX9227"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5PL3HX9227');
+</script>
+
+
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div id="header">
+		<nav class="navbar navbar-expand-md navbar-light bg-navbar">
+			<div class="container">
+				
+				<a class="navbar-brand" href="/">
+				</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav nav-pills ml-auto">
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/papers/">papers</a>
+						</li>
+            <!--						
+						<li class="nav-link">
+						
+            <a class="mx-1" href="/projects/">projects</a></li> --> 
+            
+						<li class="nav-link">
+              
+						<a class="mx-1" href="/team/">team</a></li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/research/">research</a>
+	          </li>
+						
+						<li class="nav-link">
+						
+						<a class="mx-1" href="/events/">events</a>
+            </li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container mt-4">
+
+	<div class="row">
 	<div class="col-lg-12">
 		<object class="pull-left biglogo" data="/images/logo.svg" type="image/svg+xml"></object>
 		<div class="bigtitle logobox">
@@ -59,24 +144,75 @@ categories:
 </div>
 
 <div class="row">
-	{% for paper in site.categories.papers limit:4 %}
+	
 	<div class="col-lg-3 reduced-gutter">
 		<div class="pad-left">
 			<div class="note">
 				<i class="fa fa-file-text-o fa-fw"></i>
-				<a class="off" href="{{ paper.url }}">
-				{{ paper.title }}
+				<a class="off" href="/papers/differences-in-temporal-processing/">
+				Differences in temporal processing speeds between the right and left auditory cortex reflect the strength of recurrent synaptic connectivity
 				</a>
 			</div>
 			<div class="smallspacer"></div>
 			<div class="smallnote">
 				Posted
-				{{ paper.date | date: "%-d %b %Y" }}
+				21 Oct 2022
 			</div>
 			<div class="bigspacer"></div>
 		</div>
 	</div>
-	{% endfor %}
+	
+	<div class="col-lg-3 reduced-gutter">
+		<div class="pad-left">
+			<div class="note">
+				<i class="fa fa-file-text-o fa-fw"></i>
+				<a class="off" href="/papers/recurrent-connectivity/">
+				Recurrent connectivity underlies lateralized temporal processing differences in Auditory Cortex
+				</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote">
+				Posted
+				14 Apr 2021
+			</div>
+			<div class="bigspacer"></div>
+		</div>
+	</div>
+	
+	<div class="col-lg-3 reduced-gutter">
+		<div class="pad-left">
+			<div class="note">
+				<i class="fa fa-file-text-o fa-fw"></i>
+				<a class="off" href="/papers/effects-of-direct-current/">
+				Effects of direct current stimulation on synaptic plasticity in a single neuron
+				</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote">
+				Posted
+				22 Mar 2021
+			</div>
+			<div class="bigspacer"></div>
+		</div>
+	</div>
+	
+	<div class="col-lg-3 reduced-gutter">
+		<div class="pad-left">
+			<div class="note">
+				<i class="fa fa-file-text-o fa-fw"></i>
+				<a class="off" href="/papers/using-neural-circuit-interrogation/">
+				Using Neural Circuit Interrogation in Rodents to Unravel Human Speech Decoding
+				</a>
+			</div>
+			<div class="smallspacer"></div>
+			<div class="smallnote">
+				Posted
+				30 Jan 2020
+			</div>
+			<div class="bigspacer"></div>
+		</div>
+	</div>
+	
 </div>
 
 
@@ -93,11 +229,27 @@ categories:
 	<div class="col-lg-12 reduced-gutter">
 		<div class="pad-left">
 			<ul class="list-inline">
-				{% for page in site.categories.misc %}
+				
 				<li class="footernav list-inline-item">
-					<i class="fa fa-angle-right"></i> <a class="off" href="{{ page.url }}">{{ page.title }}</a>
+					<i class="fa fa-angle-right"></i> <a class="off" href="/misc/about/">About</a>
 				</li>
-				{% endfor %}
+				
+				<li class="footernav list-inline-item">
+					<i class="fa fa-angle-right"></i> <a class="off" href="/misc/bioanimation/">Bioanimation Team</a>
+				</li>
+				
+				<li class="footernav list-inline-item">
+					<i class="fa fa-angle-right"></i> <a class="off" href="/misc/contact/">Contact</a>
+				</li>
+				
+				<li class="footernav list-inline-item">
+					<i class="fa fa-angle-right"></i> <a class="off" href="/misc/funding/">Funding</a>
+				</li>
+				
+				<li class="footernav list-inline-item">
+					<i class="fa fa-angle-right"></i> <a class="off" href="/misc/openings/">Openings</a>
+				</li>
+				
 				<li class="footernav list-inline-item">
           <!--<i class="fa fa-angle-right"></i> <a class="off" href="/talks/">Talks</a> -->
 				</li>
@@ -109,3 +261,11 @@ categories:
 		<div class="spacer"></div>
 </div>
 </div>
+
+
+	</div>
+
+	<div id="footer"><span style="display:none">foo</span></div>
+
+</body>
+</html>
