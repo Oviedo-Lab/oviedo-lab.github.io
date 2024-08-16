@@ -1,0 +1,311 @@
+.julius-sans-one-regular {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+.jost-regualar {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+/* regular declarations */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Julius Sans One", "Jost", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background: black !important;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.full-wrapper {
+    width: 100%;
+}
+
+.navbar {
+    transition: all 0.5s;
+}
+
+.container-fluid {
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding: 1%;
+    left: 0;
+}
+
+.navbar-nav {
+    margin: 0;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-brand a {
+    margin: 0;
+    width: 100%;
+}
+
+.navbar-logo {
+    width: 12%;
+    height: 12%;
+    padding: .5%;
+    display: inline-block;
+}
+
+.navbar span {
+    width: 100%;
+}
+
+.smart-scroll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.current-members-section {
+    background: white;
+    margin-top: 20px;
+    height: auto;
+}
+
+.current-members-title {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.current-members-section .full-grid {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-gap: auto;
+    width: auto;
+}
+
+.current-members-section h2 {
+    color: #000;
+}
+
+.current-members-section p {
+    color: #000;
+}
+
+.grid-item {
+    padding: 50px;
+}
+
+.img-item {
+    display: grid;
+    place-items: center;
+}
+
+.grid-item img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    /* translate: 40%; */
+    margin-bottom: 10px;
+}
+
+hr {
+    height: 2px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 10%;
+    transform: translate(450%, 0);
+    text-align: center;
+    background-color: rgb(120, 118, 118);
+    border: none;
+}
+
+p {
+    font-family: "Jost", sans-serif;
+    text-align: center;
+}
+
+.profile {
+    color: #000;
+    text-decoration: none;
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.past-members-title {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.past-members-section {
+    background-color: black;
+    margin-top: 20px;
+    height: auto;
+    padding: 1%;
+}
+
+.past-members-section .past-members-names {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 0.5fr);
+    width: 100%;
+}
+
+.past-members-names h2 {
+    font-size: 16px;
+    color: white;
+}
+
+.past-members-names p {
+    font-size: 12px;
+    color: white;
+}
+
+.past-members-section .past-members-names .grid-item {
+    padding: 10px;
+}
+
+@media screen and (max-width:500px) {
+
+    .navbar-toggler{
+        width: 10%;
+    }
+    .navbar-nav {
+        text-align: right;
+    }
+
+    .nav-item {
+        right: 100%;
+    }
+
+    .navbar-brand {
+        width: 80%;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+    }
+
+    .navbar span {
+        width: 100%;
+        font-size: 15px;
+        align-items: center;
+    }
+
+    .navbar-logo {
+        width: 15%;
+        height: 15%;
+    }
+
+    .current-members-section .full-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: auto;
+        width: auto;
+    }
+
+    .past-members-section .past-members-names {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 0.5fr);
+        width: 100%;
+    }
+
+
+    .past-members-names h2 {
+        font-size: 12px;
+        color: white;
+    }
+
+    .past-members-names p {
+        font-size: 10px;
+        color: white;
+    }
+
+
+}

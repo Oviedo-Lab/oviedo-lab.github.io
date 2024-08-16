@@ -1,0 +1,325 @@
+.julius-sans-one-regular {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+}
+
+.jost-regualar {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+/* regular declarations */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Julius Sans One", "Jost", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background: white !important;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+.full-wrapper {
+    width: 100%;
+}
+
+.navbar {
+    transition: all 0.5s;
+}
+
+.container-fluid {
+    justify-content: space-between;
+}
+
+.nav-item {
+    padding: 1%;
+    left: 0;
+}
+
+.navbar-nav {
+    margin: 0;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-brand a {
+    margin: 0;
+    width: 100%;
+}
+
+.navbar-logo {
+    width: 12%;
+    height: 12%;
+    padding: .5%;
+    display: inline-block;
+}
+
+.navbar span {
+    width: 100%;
+}
+
+.smart-scroll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.img-container {
+    text-align: center;
+    height: 350px;
+    width: 200%;
+}
+
+.building-pic2 {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    translate: -25%;
+    filter: blur(5px);
+}
+
+.building-pic1 {
+    z-index: 1;
+    height: 350px;
+    width: 50%;
+    object-fit: cover;
+    transform: translate(0, -100%);
+}
+
+.fadeInUp-animation {
+    animation: 1.5s fadeInUp;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.openings {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.container {
+    max-width: 98%;
+}
+
+.positions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: auto;
+    width: auto;
+    text-align: center;
+}
+
+.grid-item h2 {
+    font-size: 20px;
+}
+
+.grid-item p {
+    font-size: 16px;
+    font-family: "Jost", sans-serif;
+}
+
+.grid-item {
+    padding: 50px;
+}
+
+.brain-img {
+    display: grid;
+    place-items: center;
+}
+
+.icon-pics {
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+.interest {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.block {
+    line-height: 1.6;
+    translate: 36%;
+}
+
+.contact {
+    font-family: "Jost", sans-serif;
+    display: block;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+    width: 27%
+}
+
+.location {
+    font-family: "Julius Sans One", sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .navbar-toggler{
+        width: 10%;
+    }
+    
+    .navbar-nav {
+        text-align: right;
+    }
+
+    .nav-item {
+        right: 100%;
+    }
+
+    .navbar-brand {
+        width: 80%;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+    }
+
+    .navbar span {
+        width: 100%;
+        font-size: 15px;
+        align-items: center;
+    }
+
+    .navbar-logo {
+        width: 15%;
+        height: 15%;
+    }
+
+    .img-container {
+        text-align: center;
+        height: 350px;
+        width: 100%;
+    }
+
+    .building-pic2 {
+        height: 350px;
+        width: 100%;
+        translate: 0%;
+        object-fit: cover;
+        z-index: -1;
+        filter: blur(5px);
+    }
+
+    .building-pic1 {
+        z-index: 1;
+        height: 350px;
+        width: 50%;
+        object-fit: cover;
+        transform: translate(50%, -100%);
+    }
+
+    .positions-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: auto;
+        width: auto;
+        text-align: center;
+    }
+
+
+    .interest {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contact {
+        font-family: "Jost", sans-serif;
+        display: block;
+        font-size: 12px;
+        margin-top: 20px;
+        text-align: center;
+        width: 50%
+    }
+
+    .block {
+        display: grid;
+        place-items: center;
+        translate: 0%;
+    }
+}
