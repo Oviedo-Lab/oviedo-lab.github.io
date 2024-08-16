@@ -304,7 +304,7 @@ p {
 #how-we-do-it {
     width: 100%;
     height: auto;
-    background: black;
+    background: rgb(120, 118, 118);
 }
 
 
@@ -403,7 +403,7 @@ p {
 }
 
 .oneitem a {
-    color: #000;
+    color: #fff;
     display: grid;
     place-items: center;
 }
