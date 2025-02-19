@@ -1,0 +1,3 @@
+import{b as _}from"./utils.Dsj-nIRB.js";import{E as r,F as b}from"./scheduler.cOZPnMTP.js";function S(t,n,o=!0){return n===t.length-1?o?t[0]:t[n]:t[n+1]}function U(t,n,o=!0){return n<=0?o?t[t.length-1]:t[0]:t[n-1]}function V(t){return t[t.length-1]}function v(t,{delay:n=0,duration:o=400,easing:s=b}={}){const e=+getComputedStyle(t).opacity;return{delay:n,duration:o,easing:s,css:c=>`opacity: ${c*e}`}}function x(t,{delay:n=0,duration:o=400,easing:s=_,x:e=0,y:c=0,opacity:l=0}={}){const u=getComputedStyle(t),i=+u.opacity,p=u.transform==="none"?"":u.transform,a=i*(1-l),[m,$]=r(e),[g,y]=r(c);return{delay:n,duration:o,easing:s,css:(f,h)=>`
+			transform: ${p} translate(${(1-f)*m}${$}, ${(1-f)*g}${y});
+			opacity: ${i-a*h}`}}export{x as a,v as f,V as l,S as n,U as p};
