@@ -61,7 +61,7 @@ const images: any = import.meta.glob(
     ['$content/events/**/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}'],
     {
         eager: true,
-        query: { enhanced: true, w:"2200;1800;1280;640;400" }
+        query: { enhanced: true, w:"1280;640;400" }
     }
 );
 

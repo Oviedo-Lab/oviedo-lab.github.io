@@ -26,7 +26,6 @@
 
 
 
-
 <svelte:head>
 	<title>Oviedo Lab</title>
 	<meta name="description" content="We study evolutionarily conserved mechanisms for decoding social calls in the Auditory Cortex of rodents" />
