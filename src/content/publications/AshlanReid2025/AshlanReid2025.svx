@@ -1,0 +1,20 @@
+---
+title: Asynchronous development of the mouse auditory cortex is driven by hemispheric identity and sex
+authors:
+    - Ashlan P. Reid
+    - Demetrios Neophytou
+    - Robert Levy
+    - Cody N. Pham
+    - Hysell V. Oviedo
+yyyymmdd: 20250417
+doi: 10.1038/s41467-025-58891-3
+journal: Nature Communications
+url: https://www.nature.com/articles/s41467-025-58891-3
+isPreprint: false
+isReviewArticle: false
+isSciComms: false
+thumbnail: /src/content/publications/AshlanReid2025/AshlanReid2025-thumbnail.jpg
+thumbnailSummary: Figure 1 from the paper shows differences in thalamocortical input maturation between the left and right auditory cortex (ACx) across developmental stages, using bilateral slice preparation and voltage-sensitive dye imaging.
+---
+
+Lateralized auditory processing is essential for specialized functions such as speech processing, typically dominated by the Left Auditory Cortex (ACx) in humans. Hemispheric specializations also occur in the adult mouse ACx, but their developmental origins are unclear. Our study finds that the Left and Right ACx in mice reach developmental milestones at different ages. Thalamocortical responses and maturation of synaptic dynamics develop earlier in the Right ACx than the Left. We show that this timing offset predicts hemisphere-dependent differences in sensory-driven plasticity. Juvenile tone exposure at specific times results in imbalanced adult tone frequency representations in the Right and Left ACx. Additionally, sex influences the timing of plasticity; female Right ACx plasticity occurs before male Right ACx, and female Left ACx aligns with male Right ACx plasticity. Our findings demonstrate that sex and hemispheric identity drive asynchronous development and contribute to functional differences in sensory cortices.

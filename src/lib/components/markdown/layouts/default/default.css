@@ -1,0 +1,98 @@
+@import '../common.css';
+
+@layer components {
+    :root {
+        --hyperlink: oklch(45.381% 0.11335 53.868);
+        --hyperlink-active: oklch(56.324% 0.14128 51.369);
+    }
+    .dark {
+        --hyperlink: oklch(83.269% 0.08111 77.373);
+        --hyperlink-active: oklch(89.051% 0.07019 91.231);
+    }
+
+    @theme {
+        --color-hyperlink: var(--hyperlink);
+        --color-hyperlink-active: var(--hyperlink-active);
+    }
+
+    [data-slot="markdown-content"] {
+        @apply max-w-prose md:max-w-[80ch] lg:max-w-[90ch] xl:max-w-[98ch] 2xl:max-w-[110ch] mx-auto;
+        * {
+            @apply text-left;
+        }
+        h1 {
+            @apply text-left scroll-m-20 mt-4 mb-4 text-3xl md:text-4xl font-bold tracking-tight;
+        }
+        h2 {
+            @apply scroll-m-20 mt-5 border-b pb-2 text-2xl font-bold tracking-tight transition-colors first:mt-0;
+        }
+        h3 {
+            @apply scroll-m-20 mt-4 text-xl font-semibold tracking-tight first:mt-0;
+        }
+        h4 {
+            @apply scroll-m-20 mt-3.5 text-lg font-semibold tracking-tight first:mt-0;
+        }
+        h5,h6 {
+            @apply scroll-m-20 mt-3 text-lg font-medium tracking-tight first:mt-0;
+        }
+
+        a {
+            @apply text-hyperlink hover:text-hyperlink-active text-wrap! wrap-anywhere! focus-visible:outline-none focus-visible:ring-2 focus-visible:rounded-xs focus-visible:ring-offset-transparent focus-visible:ring-ring break-all!;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+
+            &:hover, &.active, &:focus-visible {
+                @apply underline underline-offset-3;
+            }
+        }
+
+        p {
+            @apply leading-6 mt-3;
+        }
+        blockquote {
+            @apply mt-6 border-l-2 pl-6 italic;
+        }
+        table {
+            @apply w-full;
+
+            thead {
+                tr {
+                    @apply even:bg-muted m-0 border-t p-0;
+
+                    th {
+                        @apply border px-4 py-2 text-left font-bold [[align=center]]:text-center [[align=right]]:text-right;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    @apply even:bg-muted m-0 border-t p-0;
+                }
+                td {
+                    @apply border px-4 py-2 text-left [[align=center]]:text-center [[align=right]]:text-right;
+                }
+            }
+        }
+        ul {
+            @apply my-4 ml-6 list-disc first:mt-2;
+            li {
+                @apply mt-2 pl-2;
+            }
+        }
+        ol {
+            @apply my-4 ml-6 list-decimal first:mt-2;
+            li {
+                @apply mt-2 pl-2;
+            }
+        }
+        code {
+            @apply bg-muted relative rounded px-[0.34rem] py-[0.15rem] font-mono text-sm font-medium text-[1.01em];
+        }
+        img, picture {
+            @apply my-6 rounded-lg mx-auto max-w-full h-auto;
+        }
+        picture img {
+            @apply my-0;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+---
+yyyymmdd: 
+authors:
+    - 
+    - 
+thumbnail: 
+thumbnailAlt: 
+tags:
+    - 
+    - 
+---
