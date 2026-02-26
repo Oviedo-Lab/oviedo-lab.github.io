@@ -1,0 +1,21 @@
+---
+title: Circuit asymmetries underlie functional lateralization in the mouse auditory cortex
+authors:
+    - Robert B. Levy
+    - Tiemo Marquarding
+    - Ashlan P. Reid
+    - Christopher M. Pun
+    - Nicolas Renier
+    - Hysell V. Oviedo
+yyyymmdd: 20190625
+doi: 10.1038/s41467-019-10690-3
+journal: Nature Communications
+url: https://www.nature.com/articles/s41467-019-10690-3
+isPreprint: false
+isReviewArticle: false
+isSciComms: false
+thumbnail: /src/content/publications/RobertLevy2019/RobertLevy2019-thumbnail.webp
+thumbnailSummary: Figure 1 from the paper shows sweeps and mouse vocalizations evoke lateralized activation in the auditory cortex
+---
+
+The left hemisphere's dominance in processing social communication has been known for over a century, but the mechanisms underlying this lateralized cortical function are poorly understood. Here, we compare the structure, function, and development of each auditory cortex (ACx) in the mouse to look for specializations that may underlie lateralization. Using Fos brain volume imaging, we found greater activation in the left ACx in response to vocalizations, while the right ACx responded more to frequency sweeps. In vivo recordings identified hemispheric differences in spectrotemporal selectivity, reinforcing their functional differences. We then compared the synaptic connectivity within each hemisphere and discovered lateralized circuit-motifs that are hearing experience-dependent. Our results suggest a specialist role for the left ACx, focused on facilitating the detection of specific vocalization features, while the right ACx is a generalist with the ability to integrate spectrotemporal features more broadly.

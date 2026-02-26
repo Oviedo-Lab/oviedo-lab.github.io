@@ -1,0 +1,19 @@
+---
+title: Non-canonical role of DNA mismatch repair on sensory processing in mice
+authors:
+    - Sadia N. Rahman
+    - Demetrios Neophytou
+    - Siboney Oviedo-Gray
+    - Bao Q. Vuong
+    - Hysell V. Oviedo
+yyyymmdd: 20260216
+doi: 10.1016/j.neuroscience.2025.12.066
+journal: Neuroscience
+url: https://www.sciencedirect.com/science/article/pii/S0306452225012333
+isPreprint: false
+isReviewArticle: false
+thumbnail: /src/content/publications/SadiaRahman2026/SadiaRahman2026-thumbnail.png
+thumbnailSummary: Figure 1 from the paper shows diminished auditory function in the ACx of Msh2(-/-) mice.
+---
+
+DNA repair mechanisms are essential for cellular development and function. In post-mitotic neurons, deficiencies in DNA damage response proteins can lead to severe neurodegenerative and neurodevelopmental disorders. One highly conserved factor involved in DNA repair is MutS Homolog 2 (*Msh2*), which is responsible for correcting base–base mismatches and insertion/deletion loops during cell proliferation. However, its role in mature neurons remains poorly understood. This study investigates the impact of *Msh2* loss on sensory processing in mice. Using electrophysiological and molecular assays, we identified significant deficits in cortical and thalamic sound processing in *Msh2*<sup>-/-</sup> mice. These deficits were linked to dysfunction of the thalamic reticular nucleus (TRN), which critically regulates corticothalamic and thalamocortical activity. Our findings revealed increased oxidative damage, aberrant neuronal activity, and elevated parvalbumin (PV) expression in PV<sup>+</sup> neurons in the TRN of *Msh2*<sup>-/-</sup> mice. Additionally, we observed the presence of connexin plaques, indicating that disrupted gap junction formation may contribute to impaired TRN function. These results highlight *Msh2*'s crucial role in supporting PV⁺ neurons in the TRN, profoundly influencing sensory processing. This study provides new insight into how DNA repair mechanisms regulate neuronal development and function in a region-specific manner, potentially contributing to our understanding of their role in neurological disorders.

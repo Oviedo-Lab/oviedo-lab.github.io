@@ -1,0 +1,18 @@
+---
+title: Logistic regression for estimating functional effects with spatial transcriptomics
+authors:
+    - Michael Barkasi
+    - Cody N. Pham
+    - Demetrios Neophytou
+    - Hysell V. Oviedo
+yyyymmdd: 20250617
+doi: 10.1101/2025.06.11.659209
+journal: bioRxiv
+url: https://www.biorxiv.org/content/10.1101/2025.06.11.659209v1.full
+isPreprint: true
+isReviewArticle: false
+thumbnail: /src/content/publications/MichaelBarkasi2025/MichaelBarkasi2025-thumbnail.webp
+thumbnailSummary: "Figure 1 from the paper: (A) Schematic difference between analyses of differential expression, spatial variability, and functional spatial effects. A depiction of laterality is used as an example to represent a between-group factor. Shown from left-to-right are schematics of a volcano plot, spatial covariance plots, and a spatial-density plot. (B) Pipeline for a WSP model, from data preprocessing to hypothesis testing."
+---
+
+Spatial transcriptomics (ST) unlocks new potential for studying gene functions in cellular processes, as these functions often depend on the or-chestration of transcription across space. However, despite their growing number, analysis tools for ST remain largely aimed at data exploration, with few resources for theory-driven hypothesis testing. What’s missing is a way to test whether a factor of interest affects functionally relevant parameters of a gene’s spatial distribution. We present a tool to fill this gap, which we call a warped sigmoidal Poisson-process mixed-effects (WSP, pronounced "wisp") model. WSP models are the first ST tool allowing researchers to test biologically critical questions without bespoke preprocessing pipelines for identifying key spatial parameters. By aligning coordinates to an axis of interest and letting a likelihood-based regression find between-group effects on expression rates and boundaries, WSP models replace error-prone manual preprocessing with minimally biased hypothesis testing. Integration with genome databases such as GO and KEGG is straightforward, as WSP model estimates of effects take the form of log fold change values. Using MERFISH data collected from wild-type mouse pups, we demonstrate utility by using a WSP model to test the hypothesis that there are interacting effects of age and laterality on gene expression during whisker barrel development.
