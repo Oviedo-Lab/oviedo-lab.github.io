@@ -1,0 +1,1 @@
+import{bu as n,e as l,b as o,aW as a,g as u}from"./UEtltqRn.js";function s(e){o===null&&n(),a&&o.l!==null?c(o).m.push(e):l(()=>{const t=u(e);if(typeof t=="function")return t})}function c(e){var t=e.l;return t.u??={a:[],b:[],m:[]}}const _=Object.freeze(Object.defineProperty({__proto__:null},Symbol.toStringTag,{value:"Module"}));export{_,s as o};
