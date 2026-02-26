@@ -1,0 +1,21 @@
+---
+title: # The paper title goes here
+authors:
+    - # Your Name
+    - # Hysell V. Oviedo
+yyyymmdd: # 20101017
+doi: # The doi (without url component), e.g. 10.1038/nn.2659
+journal: # Journal name
+url: # URL to the full text of the paper
+isPreprint: false # Set to true if the paper is a preprint, false otherwise
+isReviewArticle: false # Set to true if the paper is a review/meta article, false otherwise. This overrides the isPreprint field.
+isSciComms: false # Set to true if the paper is a science communication article / blog post, false otherwise. This overrides the isPreprint and isReviewArticle fields.
+thumbnail: /src/content/publications/{subfolder}/{image_file.png/jpg/webp/...} # Path to the thumbnail image for the paper, relative to the src/content/publications folder
+thumbnailSummary: # Text describing the thumbnail image, used as alt text and for accessibility purposes. Should be a concise description of the image content, ideally referencing a specific figure or panel from the paper.
+---
+
+<!-- ABSTRACT -->
+<!-- Use markdown formatting syntax to format the abstract text. For example, ** for bold text and * for italics. Smartypants typography are available and will automatically convert basic ASCII punctuations to proper typographic punctuation HTML entities. To note, use double-dashes -- for en-dash and triple-dashes --- for em-dash -->
+<!-- In some cases, abstract may contains multiple subsections. In such case, use ## for h2 headings (h1 is reserved for the paper title) -->
+<!-- Other special formatting outside of the markdown specs can be done using inlined HTML, such as <sup></sup> for superscript and <sub></sub> for subscript -->
+Your abstract text goes here. Lorem *ipsum* dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. **Maecenas congue** ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Ut convallis, sem sit amet interdum consectetuer, odio augue<sup>++</sup> aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet commodo nulla. Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac quam vel tempus.

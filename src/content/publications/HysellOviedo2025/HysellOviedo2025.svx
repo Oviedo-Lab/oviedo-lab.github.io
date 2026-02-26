@@ -1,0 +1,24 @@
+---
+title: Your left and right brain hear language differently − a neuroscientist explains how
+authors:
+    - Hysell V. Oviedo
+yyyymmdd: 20250604
+doi: 10.1038/s41467-025-58891-3
+journal: The Conversation
+url: https://theconversation.com/your-left-and-right-brain-hear-language-differently-a-neuroscientist-explains-how-257436
+isPreprint: false
+isReviewArticle: false
+isSciComms: true
+thumbnail: /src/content/publications/HysellOviedo2025/SciComms_20250604_thumbnail.png
+thumbnailSummary: Sound information moves through the cochlea to the brain.
+---
+
+Some of the most complex cognitive functions are possible because different sides of your brain control them. Chief among them is speech perception, the ability to interpret language. In people, the speech perception process is typically dominated by the left hemisphere.
+
+Your brain breaks apart fleeting streams of acoustic information into parallel channels -- linguistic, emotional and musical -- and acts as a biological multicore processor. Although scientists have recognized this division of cognitive labor for over 160 years, the mechanisms underpinning it remain poorly understood.
+
+Researchers know that distinct subgroups of neurons must be tuned to different frequencies and timing of sound. In recent decades, studies on animal models, especially in rodents, have confirmed that splitting sound processing across the brain is not uniquely human, opening the door to more closely dissecting how this occurs.
+
+Yet a central puzzle persists: What makes near-identical regions in opposite hemispheres of the brain process different types of information?
+
+Answering that question promises broader insight into how experience sculpts neural circuits during critical periods of early development, and why that process is disrupted in neurodevelopmental disorders.
