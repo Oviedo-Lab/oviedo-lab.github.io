@@ -1,28 +1,10 @@
-import type { Heading, Root } from "mdast";
-import type { VFile } from "vfile";
-
-type HeadingItem = {
-    level: number;
-    title: string;
-    titleHtml: string;
-};
-
-type FrontmatterData = Record<string, unknown> & {
-    headings?: HeadingItem[];
-};
-
-type HeadingsVFileData = Record<string, unknown> & {
-    headings?: HeadingItem[];
-    fm?: FrontmatterData;
-};
-
 export default function headings() {
-    let visit: typeof import("unist-util-visit").visit | undefined;
-    let tree_to_string: typeof import("mdast-util-to-string").toString | undefined;
-    let to_hast: typeof import("mdast-util-to-hast").toHast | undefined;
-    let to_html: typeof import("hast-util-to-html").toHtml | undefined;
+    let visit;
+    let tree_to_string;
+    let to_hast;
+    let to_html;
 
-    return async function transformer(tree: Root, vFile: VFile) {
+    return async function transformer(tree, vFile) {
         if (!visit || !tree_to_string || !to_hast || !to_html) {
             // To quote, "The dynamic imports are weird but necessary due to how some of the remark/ unist utils are packages."
             // From the maintainer of mdsvex
@@ -33,7 +15,7 @@ export default function headings() {
             to_html = (await import("hast-util-to-html")).toHtml;
         }
 
-        const data = vFile.data as HeadingsVFileData;
+        const data = vFile.data;
         data.headings = [];
 
         const visitFn = visit;
@@ -43,10 +25,10 @@ export default function headings() {
 
         if (!visitFn || !toString || !toHast || !toHtml) return;
 
-        visitFn(tree, "heading", (node: Heading) => {
-            const headingHast = toHast(node) as { children?: unknown[] };
+        visitFn(tree, "heading", (node) => {
+            const headingHast = toHast(node);
             const titleHtml = Array.isArray(headingHast.children)
-                ? headingHast.children.map((child) => toHtml(child as Parameters<typeof toHtml>[0])).join("")
+                ? headingHast.children.map((child) => toHtml(child)).join("")
                 : "";
 
             data.headings?.push({

@@ -1,27 +1,10 @@
-import type { Paragraph, Root } from "mdast";
-import type { VFile } from "vfile";
-
-type FirstParagraph = {
-	text: string;
-	html: string;
-};
-
-type FrontmatterData = Record<string, unknown> & {
-	firstParagraph?: FirstParagraph;
-};
-
-type FirstParagraphVFileData = Record<string, unknown> & {
-	firstParagraph?: FirstParagraph;
-	fm?: FrontmatterData;
-};
-
 export default function firstParagraph() {
-	let visit: typeof import("unist-util-visit").visit | undefined;
-	let tree_to_string: typeof import("mdast-util-to-string").toString | undefined;
-	let to_hast: typeof import("mdast-util-to-hast").toHast | undefined;
-	let to_html: typeof import("hast-util-to-html").toHtml | undefined;
+	let visit;
+	let tree_to_string;
+	let to_hast;
+	let to_html;
 
-	return async function transformer(tree: Root, vFile: VFile) {
+	return async function transformer(tree, vFile) {
 		if (!visit || !tree_to_string || !to_hast || !to_html) {
 			// To quote, "The dynamic imports are weird but necessary due to how some of the remark/ unist utils are packages."
 			// From the maintainer of mdsvex
@@ -32,7 +15,7 @@ export default function firstParagraph() {
 			to_html = (await import("hast-util-to-html")).toHtml;
 		}
 
-		const data = vFile.data as FirstParagraphVFileData;
+		const data = vFile.data;
 		data.firstParagraph = undefined;
 
 		const visitFn = visit;
@@ -42,11 +25,11 @@ export default function firstParagraph() {
 
 		if (!visitFn || !toString || !toHast || !toHtml) return;
 
-		visitFn(tree, "paragraph", (node: Paragraph) => {
+		visitFn(tree, "paragraph", (node) => {
 			if (!data.firstParagraph) {
-				const paragraphHast = toHast(node) as { children?: unknown[] };
+				const paragraphHast = toHast(node);
 				const html = Array.isArray(paragraphHast.children)
-					? paragraphHast.children.map((child) => toHtml(child as Parameters<typeof toHtml>[0])).join("")
+					? paragraphHast.children.map((child) => toHtml(child)).join("")
 					: "";
 
 				data.firstParagraph = {

@@ -7,8 +7,8 @@ import relativeImages from "mdsvex-relative-images";
  * @import {ElementContent} from 'hast'
  */
 import {fromHtmlIsomorphic} from 'hast-util-from-html-isomorphic';
-import headings from './src/lib/components/markdown/headings.ts';
-import firstParagraph from './src/lib/components/markdown/first-paragraph.ts';
+import headings from './src/lib/components/markdown/headings.js';
+import firstParagraph from './src/lib/components/markdown/first-paragraph.js';
 
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
