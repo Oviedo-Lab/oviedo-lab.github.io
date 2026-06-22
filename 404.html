@@ -22,17 +22,26 @@
 			gtag('config', 'G-3K9JCT5MY0');
 		</script>
 
-		<link href="/_app/immutable/entry/start.R_7psSje.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/DcCQTZRL.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/UEtltqRn.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/Ci4_8fx2.js" rel="modulepreload">
-		<link href="/_app/immutable/entry/app.DJz4V0wm.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/LAD5_PLu.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/BUZRFnHL.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/CTRZNGdX.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/mp3koiKc.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/Ci1GVA6w.js" rel="modulepreload">
+		<link href="/_app/immutable/entry/start.C-jIzK5A.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CO96ogZK.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BP5LjSeu.js" rel="modulepreload">
+		<link href="/_app/immutable/entry/app.ioDhFVNP.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/JwdpM2S5.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="/_app/immutable/nodes/0.Cs_qJngK.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/C2napTef.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DaeU7G8F.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DpCiJrqe.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/TmcOxT6m.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/j_iHy92K.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/B6PtmUQo.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BbkRkcez.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CzTzh75i.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/67M9RzNL.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Bjv8A8qc.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DFHj_qVM.js" rel="modulepreload">
 		
+		<link href="/_app/immutable/assets/0.BvnBnxDP.css" rel="stylesheet">
 	</head>
 	<body data-sveltekit-preload-data="hover" class="h-full m-0">
 		<noscript class="h-full w-full">
@@ -47,22 +56,28 @@
 		<div style="display: contents" class="h-full">
 			<script>
 				{
-					__sveltekit_180rf93 = {
+					__sveltekit_4gechg = {
 						base: ""
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.R_7psSje.js"),
-						import("/_app/immutable/entry/app.DJz4V0wm.js")
+						import("/_app/immutable/entry/start.C-jIzK5A.js"),
+						import("/_app/immutable/entry/app.ioDhFVNP.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
 
 					if ('serviceWorker' in navigator) {
+						const script_url = '/service-worker.js';
+						const policy = globalThis?.window?.trustedTypes?.createPolicy(
+							'sveltekit-trusted-url',
+							{ createScriptURL(url) { return url; } }
+						);
+						const sanitised = policy?.createScriptURL(script_url) ?? script_url;
 						addEventListener('load', function () {
-							navigator.serviceWorker.register('/service-worker.js');
+							navigator.serviceWorker.register(sanitised);
 						});
 					}
 				}
